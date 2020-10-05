@@ -35,6 +35,8 @@ def get_mm_resolution(data: numpy.array):
 if __name__ == '__main__':
     for file_path in FILE_NAMES:
         figure_info = read_data(file_path)
-        print(figure_info['resolution'] / get_mm_resolution(figure_info['array']))
-
+        try:
+            print(figure_info['resolution'] / get_mm_resolution(figure_info['array']))
+        except ZeroDivisionError:
+            print('mm resolution is 0, I do not work(( but I think answer is 0')
 
