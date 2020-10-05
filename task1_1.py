@@ -16,7 +16,7 @@ def read_data(file_name: str) -> Dict:
     with open(file_name, 'r') as f:
         data = f.read()
     splited_data = data.split('\n')
-    resolution = int(splited_data[0])
+    resolution = float(splited_data[0])
     for row in splited_data[2:-1]:
 
         splited_row = row.split(' ')
